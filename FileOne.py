@@ -27,4 +27,4 @@
 # else:
 #     print('Сотрудника нет')
 
-#New Lession2.2
+#New Lession2.2 beta version!
