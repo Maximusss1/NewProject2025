@@ -171,5 +171,56 @@
 # old_list.sort()
 # print(f'Отсортированный список: {old_list}')
 
-#Zadanie 9
+#Homework 1
+# main = [1, 0, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 0, 1]
+# first_company = [0, 0, 0]
+# second_company = [1, 0, 0, 1, 1]
+# third_company = [1, 1, 1, 0, 1]
+# main.extend(first_company)
+# main.extend(second_company)
+# main.extend(third_company)
+# print(f'Общий список компании: {main}')
+# print('Количество не выполненных задач: ',main.count(0))
 
+# Задача 2. Вредоносное ПО
+# def summary(my_list):
+#     lists = [i for i in my_list]
+#     all_s = lists.count('?') + lists.count('!')
+#     return all_s
+#
+# second_text = input('Введите первое сообщение: ')
+# first_text = input('Введите второе сообщение: ')
+# second_list = [i for i in second_text]
+# first_list = [i for i in first_text]
+# # second_list.extend(sуcond_text)
+# # first_list.extend(first_text)
+# count_second = summary(second_list)
+# count_first = summary(first_list)
+# if count_second > count_first:
+#     second_list.extend(first_list)
+#     for i in second_list:
+#         print(i,end='')
+# elif count_second < count_first:
+#     first_list.extend(second_list)
+#     for i in first_list:
+#         print(i,end='')
+# elif count_second == count_first:
+#     print('ОЙ')
+
+# Задача 3. Пакеты
+# decode = []
+# list_packs = []
+# packs = int(input('Кол-во пакетов? '))
+# for pack in range(packs):
+#     print('\nПакет номер',pack + 1)
+#     for i in range(4):
+#         print('\n',i + 1,'бит:',end='')
+#         bit = int(input(''))
+#         decode.append(bit)
+#     if decode.count(-1) <= 1:
+#         list_packs.extend(decode)
+#     else:
+#         print('Много ошибок в пакете!')
+#         decode = []
+# print(f'Полученное сообщение: {list_packs}')
+# print('Кол-во ошибок в сообщении: ',list_packs.count(-1))
