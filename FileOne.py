@@ -484,3 +484,98 @@
 # print(f'Урон второго отряда: {team_2}')
 # print(f'fСостояние третьего отряда: {team_3}')
 
+#
+#import random
+# original_prices = [random.randint(-5,5) for _ in range(7)]
+# original_prices = [-12, 3, 5, -2, 1]
+# new_prices = original_prices[:]
+#
+# for i in range(len(original_prices)):
+#     if new_prices[i] < 0:
+#         new_prices[i] = 0
+# print(f'Первый список: {original_prices}')
+# print(f'Второй список: {new_prices}')
+#print("Мы потеряли: ", sum(original_prices) - sum(new_prices))
+
+#Задача 2. Срезы
+# nums = [48, -10, 9, 38, 17, 50, -5, 43, 46, 12]
+# #В первой строке выведите первые пять элементов списка.
+# print(nums[:5])
+# #Во второй строке выведите весь список, кроме последних двух элементов.
+# print(nums[:-2])
+# # В третьей строке выведите все элементы с чётными индексами.
+# print(nums[::-1][::2])
+
+#Задача 3. Удаление части
+# import random
+# numbs = [random.randint(1,10) for _ in range(10)]
+# print(f'Первый список: {numbs}')
+# a = random.randint(0,4)
+# b = random.randint(4,8)
+# print('Новый список: ',numbs[0:a] + numbs[b:])
+
+#///////////////////////////////////////////////////////////////
+
+#Задание 1. Гласные буквы
+# text = list(input('Введите текст: '))
+# vowels = {"а", "е", "ё", "и", "о", "у", "ы", "э", "ю", "я"}
+# new_list = [i for i in text if i in vowels]
+# print(f'Список гласных букв: {new_list}')
+# print(f'Длина списка: {len(new_list)}')
+
+#Задание 2. Генерация
+# numb = int(input('Введите число: '))
+# list_numbs = [1 if i % 2 == 0 or i == 0 else i % 5 for i in range(numb)]
+# print(f'Итоговый список: {list_numbs}')
+
+#3 Задание 3. Случайные соревнования
+# import random
+# team_1 = [round(random.uniform(5.0, 10.0),2) for _ in range(10)]
+# team_2 = [round(random.uniform(5.0, 10.0),2) for _ in range(10)]
+# print(f'Первая команда: {team_1}')
+# print(f'Вторая команда: {team_2}')
+# final_list = [round(team_1[i],2) if team_1[i] > team_2[i] else round(team_2[i],2) for i in range(10)]
+# print(f'Результаты: {final_list}')
+
+#Задание 4. Тренировка со срезами
+# alphabet = 'abcdefg'
+# print('1',alphabet[::])
+# print('2',alphabet[::-1])
+# print('3',alphabet[::2])
+# print('4',alphabet[1::2])
+# print('5',alphabet[:1])
+# print('6',alphabet[-1:])
+# print('7',alphabet[3:4])
+# print('8',alphabet[-3::])
+# print('9',alphabet[3:5])
+# print('10',alphabet[3:5][::-1])
+
+#Задание 5. Разворот
+# text = input('Введите строку: ')
+# n1 = text.index('h')
+# n2 = text.rindex('h')
+# print('Развёрнутая последовательность между первым и последним h:',text[n1 + 1:n2][::-1])
+
+# #Задание 6. Двумерный список
+#
+# numb_list = [[j + i for i in range(0,9,4)] for j in range(1,5)]
+# print(numb_list)
+
+#Задание 7. Список списков
+# nice_list = [[[1, 2, 3], [4, 5, 6], [7, 8, 9]], [[10, 11, 12], [13, 14, 15], [16, 17, 18]]]
+# new_list = [k for i in (range(len(nice_list)))
+#             for j in range(len(nice_list[i]))
+#             for k in nice_list[i][j]]
+# print(new_list)
+
+#Задание 8. Шифр Цезаря
+# RUSSIAN_LOWERCASE = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+# list_rus = list(RUSSIAN_LOWERCASE)
+# text = input('Введите сообщение: ')
+# step = int(input('Введите сдвиг: '))
+# index = 0
+# encrypted = [list_rus[(list_rus.index(i) + step) % len(list_rus)]
+#              if i in list_rus else i for i in text.lower()]
+# print('\nСообщение: ')
+# for j in encrypted:
+#     print(j,end='')
