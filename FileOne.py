@@ -429,3 +429,58 @@
 #
 # print(f'Нужно приписать чисел: {counter}')
 # print(f'Сами числа: {num_list[:counter][::-1]}')
+#
+# left = int(input('Левая граница: '))
+# high = int(input('Правая граница: '))
+#
+# cubs_list = [x ** 3 for x in range(left,high + 1)]
+# k_list = [x ** 2 for x in range(left,high + 1)]
+#
+# print(f'Список кубов чисел в диапазоне от {left} до {high}: {cubs_list}')
+# print(f'Список квадратов чисел в диапазоне от {left} до {high}: {k_list}')
+
+# text = input('Введите строку: ')
+# text_second = input('Введите дополнительный символ: ')
+#
+# first_list = [x * 2 for x in list(text)]
+# second_list = [x + text_second for x in first_list]
+#
+# print(f'Список удвоенных символов: {first_list}')
+# print(f'Склейка с дополнительными символами: {second_list}')
+
+# def price_procent(price,procent):
+#     new_price = (price * procent) / 100
+#     price += new_price
+#     return price
+#
+# one_year = [float(input('Цена на товар: ')) for _ in range(5)]
+# first_year = int(input('Повышение на первый год: '))
+# second_year = int(input('Повышение на второй год: '))
+#
+# two_year = [price_procent(x,first_year) for x in one_year]
+# free_year = [price_procent(x,second_year) for x in two_year]
+#
+# print('Сумма цен за каждый год: ',round(sum(one_year), 2), round(sum(two_year), 2), round(sum(free_year), 2) )
+
+# # Задача 1. Список чётных чисел
+# num_1 = int(input('Число 1: '))
+# num_2 = int(input('Число 2: '))
+# n_list = [x ** 2 for x in range(num_1,num_2 + 1) if x % 2 == 0]
+# print(f'Итоговый список: {n_list}')
+
+#Задача 2. Магазин
+# original_prices = [1.25, -9.45, 10.22, 3.78, -5.92, 1.16]
+# new_list = [(x if x > 0 else 0)for x in original_prices]
+# print(f'Результат: {new_list}')
+
+#Задача 3. Отряды
+# import random
+# team_1 = [random.randint(50,80) for _ in range(10)]
+# team_2 = [random.randint(30,60) for _ in range(10)]
+# team_3 = [('Погиб' if team_1[i_damage] + team_2[i_damage] > 100
+#            else 'Выжил')
+#           for i_damage in range(10)]
+# print(f'Урон первого отряда: {team_1}')
+# print(f'Урон второго отряда: {team_2}')
+# print(f'fСостояние третьего отряда: {team_3}')
+
